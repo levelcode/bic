@@ -1,0 +1,26 @@
+//Main Banner
+.banner{
+	&.container{
+		@include gradient-orange;
+		margin-top: 60px; 
+		padding: 10px 0;
+		.col-md-6{
+			img{
+				max-width: 90%;
+				margin: 10px auto;
+				display: block;
+				height: auto;
+			}
+			a{
+				text-decoration: underline;
+				display: block;
+				margin: 1em auto;
+				color: $white;
+				text-align: center;
+				&.button-def{
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

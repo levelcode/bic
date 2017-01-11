@@ -15,6 +15,10 @@
 	//button colapse
 	.btn.btn-navbar{
 		display: none;
+		//mobile
+		@include mobile{
+			display: block;
+		}
 	}
 
 	//menu
@@ -22,7 +26,13 @@
 		&.collapse{
 			display: inline-block;
 			text-align: right;
-			width: 60%;
+			width: 80%;
+			//mobile
+			@include mobile{
+				width: 100%;
+				text-align: center;
+				display: none;
+			}
 			ul.navbar-nav{
 				display: block;
 				float: none;
@@ -36,6 +46,12 @@
 							background-color: $black;
 							color: $yellow;
 						}
+					}
+					//mobile
+					@include mobile{
+						width: 100%;
+						text-align: center;
+						display: block;
 					}
 				}
 			}

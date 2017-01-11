@@ -10,7 +10,7 @@ $black: #000000;
 $white: #ffffff;
 $pink: #c64d9b; 
 
-
-
 // if one value is a string, assume a feature/value pair
-$medium: max-width 769px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
