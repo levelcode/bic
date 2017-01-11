@@ -10,7 +10,7 @@ function bst_enqueues() {
   	wp_register_style('fawesome-css', get_template_directory_uri() . '/assets/css/font-awesome.min.css', false, null);
 	wp_enqueue_style('fawesome-css');
 
-	wp_register_style('styles-css', get_template_directory_uri() . '/assets/css/custom.css', false, null);
+	wp_register_style('styles-css', get_template_directory_uri() . '/assets/css/styles.css', false, null);
 	wp_enqueue_style('styles-css');
 	
 	/* Scripts */
