@@ -1,4 +1,16 @@
 //Fonts
-$arialR : 'Arial Rounded MT';
-$mias : 'Mias Scribblings';
-$cavort : 'Cavorting';
+$arialR: 'Arial Rounded MT';
+$mias: 'Mias Scribblings';
+$cavort: 'Cavorting';
+
+//colors
+$yellow: #fd8e01;
+$orange: #d36226;
+$black: #000000;
+$white: #ffffff;
+$pink: #c64d9b; 
+
+
+
+// if one value is a string, assume a feature/value pair
+$medium: max-width 769px;

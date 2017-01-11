@@ -22,11 +22,7 @@
     <meta property="og:image" content="" />
 
     <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_template_directory_uri(); ?>/img/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/img/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/img/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/img/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="icon" type="image/png" href="<?php bloginfo('template_url')?>/favicon.png" />
 
    
     <?php if ( is_admin_bar_showing() ) {?>
@@ -46,18 +42,16 @@
           <i class="icon-chevron-down"></i>
         </button>
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="brand" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-        <a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerstrap' ); ?>"><?php _e( 'Skip to content', 'boilerstrap' ); ?></a>
         <div class="nav-collapse collapse">
-  	  	<?php 
-  	  	    wp_nav_menu( array(
-  	  	        'menu'       => 'top_menu',
-  	  	        'depth'      => 3,
-  	  	        'container'  => false,
-  	  	        'menu_class' => 'nav',
-  	  	        //Process nav menu using our custom nav walker
-  	  	        'walker' => new twitter_bootstrap_nav_walker())
-  	  	    );
-  	  	?>
+    	  	<?php
+              wp_nav_menu( array(
+                  'theme_location'    => 'top_menu',
+                  'depth'             => 2,
+                  'menu_class'        => 'nav navbar-nav',
+                  'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                  'walker'            => new wp_bootstrap_navwalker())
+              );
+          ?>
         </div><!--/.nav-collapse -->
       </div>
     </div>

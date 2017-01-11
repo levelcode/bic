@@ -1,0 +1,44 @@
+//Header
+#site-navigation{
+	@include gradient-black();
+	padding: 5px 0 10px;
+	margin: 0;
+	//logo
+	.brand{
+		display: block;
+		width: 100px;
+		height: 35px;
+		background-image: url('../img/logo.png');
+		display: inline-block;
+		text-indent: -99999px;
+	}
+	//button colapse
+	.btn.btn-navbar{
+		display: none;
+	}
+
+	//menu
+	.nav-collapse{
+		&.collapse{
+			display: inline-block;
+			text-align: right;
+			width: 60%;
+			ul.navbar-nav{
+				display: block;
+				float: none;
+				li{
+					display: inline-block;
+					float: none;
+					a{
+						color: $white;
+						&:hover,
+						&:focus{
+							background-color: $black;
+							color: $yellow;
+						}
+					}
+				}
+			}
+		}
+	}
+}
