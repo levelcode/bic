@@ -4,6 +4,8 @@
   <div class="row">
 		<!--banner-->
 		<?php get_template_part('inc/banner'); ?>
+		<!--steps-->
+		<?php get_template_part('inc/steps'); ?>
   </div><!-- /.row -->
 </div><!-- /.container -->
 
