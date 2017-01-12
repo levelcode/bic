@@ -36,38 +36,43 @@ html, body {
     font-family: "Mias Scribblings"; }
   html p, body p {
     color: #5b5b5f; }
-
-.button-def {
-  background: #db6d33;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #db6d33 0%, #c45b23 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #db6d33 0%, #c45b23 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #db6d33 0%, #c45b23 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db6d33', endColorstr='#c45b23',GradientType=0 );
-  /* IE6-9 */
-  display: block;
-  position: relative;
-  color: #ffffff;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: 1px solid #9e491c;
-  max-width: 230px;
-  padding: 5px 0; }
-  .button-def::before {
-    content: "";
+  html .btn,
+  html .button-def, body .btn,
+  body .button-def {
+    background: #db6d33;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #db6d33 0%, #c45b23 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #db6d33 0%, #c45b23 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #db6d33 0%, #c45b23 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db6d33', endColorstr='#c45b23',GradientType=0 );
+    /* IE6-9 */
     display: block;
-    position: absolute;
-    top: 1px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #e79e77; }
-  .button-def:hover {
-    background: #db6d33; }
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid #9e491c;
+    max-width: 230px;
+    padding: 5px 0; }
+    html .btn::before,
+    html .button-def::before, body .btn::before,
+    body .button-def::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 1px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #e79e77; }
+    html .btn:hover,
+    html .button-def:hover, body .btn:hover,
+    body .button-def:hover {
+      background: #db6d33; }
 
 #site-navigation {
   background: #000000;
@@ -199,3 +204,133 @@ html, body {
     margin: 1em auto; }
   .prizes .side-left img {
     margin-top: -1em; }
+
+.form-suscription {
+  background: #f9b600;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f9b600 0%, #fd8701 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f9b600 0%, #fd8701 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f9b600 0%, #fd8701 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b600', endColorstr='#fd8701',GradientType=0 );
+  /* IE6-9 */
+  padding: 2em 0; }
+  .form-suscription header h2 {
+    text-align: center;
+    color: #000000;
+    font-size: 3em;
+    padding-bottom: 1em; }
+  .form-suscription #suscription_form fieldset {
+    display: none; }
+    .form-suscription #suscription_form fieldset.active {
+      display: block; }
+    .form-suscription #suscription_form fieldset .input-holder {
+      position: relative;
+      display: block;
+      margin: 1em auto 2em;
+      width: 100%; }
+      .form-suscription #suscription_form fieldset .input-holder::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 3px;
+        z-index: 3; }
+      .form-suscription #suscription_form fieldset .input-holder.file::after {
+        width: 26px;
+        height: 28px;
+        background-image: url("../img/clip.png");
+        right: 14%;
+        top: 18%; }
+      .form-suscription #suscription_form fieldset .input-holder.picture::after {
+        width: 36px;
+        height: 28px;
+        background-image: url("../img/images.png");
+        top: 16%; }
+      .form-suscription #suscription_form fieldset .input-holder.kid::after {
+        width: 54px;
+        height: 54px;
+        background-image: url("../img/lemon-kid.png");
+        top: -8%;
+        right: 0; }
+      .form-suscription #suscription_form fieldset .input-holder.dad::after {
+        width: 31px;
+        height: 31px;
+        background-image: url("../img/lemon-kid.png"); }
+      .form-suscription #suscription_form fieldset .input-holder.id-card::after {
+        width: 33px;
+        height: 33px;
+        background-image: url("../img/id-card.png"); }
+      .form-suscription #suscription_form fieldset .input-holder.email::after {
+        width: 29px;
+        height: 28px;
+        background-image: url("../img/id-email.png"); }
+      .form-suscription #suscription_form fieldset .input-holder.phone::after {
+        width: 28px;
+        height: 30px;
+        background-image: url("../img/phone.png"); }
+      .form-suscription #suscription_form fieldset .input-holder .dummy-field,
+      .form-suscription #suscription_form fieldset .input-holder input {
+        display: block;
+        width: 90%;
+        border: none;
+        padding: 2% 10% 2% 3%;
+        background-color: #ffffff;
+        color: #d36226;
+        font-weight: bold;
+        position: relative;
+        text-transform: uppercase;
+        z-index: 1; }
+        @media (max-width: 768px) {
+          .form-suscription #suscription_form fieldset .input-holder .dummy-field,
+          .form-suscription #suscription_form fieldset .input-holder input {
+            width: 80%;
+            margin: 0 auto; } }
+        .form-suscription #suscription_form fieldset .input-holder .dummy-field::-webkit-input-placeholder,
+        .form-suscription #suscription_form fieldset .input-holder input::-webkit-input-placeholder {
+          color: #d36226;
+          font-weight: bold;
+          text-transform: uppercase; }
+        .form-suscription #suscription_form fieldset .input-holder .dummy-field::-moz-placeholder,
+        .form-suscription #suscription_form fieldset .input-holder input::-moz-placeholder {
+          color: #d36226;
+          font-weight: bold;
+          text-transform: uppercase; }
+        .form-suscription #suscription_form fieldset .input-holder .dummy-field:-ms-input-placeholder,
+        .form-suscription #suscription_form fieldset .input-holder input:-ms-input-placeholder {
+          color: #d36226;
+          font-weight: bold;
+          text-transform: uppercase; }
+        .form-suscription #suscription_form fieldset .input-holder .dummy-field:-moz-placeholder,
+        .form-suscription #suscription_form fieldset .input-holder input:-moz-placeholder {
+          color: #d36226;
+          font-weight: bold;
+          text-transform: uppercase; }
+        .form-suscription #suscription_form fieldset .input-holder .dummy-field.file,
+        .form-suscription #suscription_form fieldset .input-holder input.file {
+          opacity: 0; }
+      .form-suscription #suscription_form fieldset .input-holder .dummy-field {
+        position: absolute;
+        z-index: 0;
+        top: 0; }
+    .form-suscription #suscription_form fieldset .side-left .input-holder input {
+      margin-right: 10%; }
+      @media (max-width: 768px) {
+        .form-suscription #suscription_form fieldset .side-left .input-holder input {
+          margin: 1em auto; } }
+    .form-suscription #suscription_form fieldset .side-right .input-holder input {
+      margin-left: 10%; }
+      @media (max-width: 768px) {
+        .form-suscription #suscription_form fieldset .side-right .input-holder input {
+          margin: 1em auto; } }
+    .form-suscription #suscription_form fieldset .asistant-frm {
+      text-align: center;
+      clear: both;
+      width: 100%; }
+      .form-suscription #suscription_form fieldset .asistant-frm .btn {
+        display: inline-block;
+        margin: .5em;
+        border-radius: 0;
+        padding: 0.5% 5%; }

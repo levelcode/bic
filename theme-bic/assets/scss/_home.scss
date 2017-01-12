@@ -1,4 +1,7 @@
+//------------------------------
 //Main Banner
+//------------------------------
+
 .banner{
 	&.container{
 		@include gradient-orange;
@@ -25,7 +28,9 @@
 	}
 }
 
+//------------------------------
 //steps
+//------------------------------
 
 .how-works {
 	margin: 4em auto;
@@ -89,7 +94,9 @@
 	}
 }
 
+//------------------------------
 //prizes
+//------------------------------
 
 .prizes{
 	background-color: $lt-gray;
@@ -103,6 +110,201 @@
 	.side-left{
 		img{
 			margin-top: -1em;
+		}
+	}
+}
+
+//------------------------------
+//form section
+//------------------------------
+
+.form-suscription{
+	@include gradient-orange;
+	padding: 2em 0;
+	//header
+	header{
+		h2{
+			text-align: center;
+			color: $black;
+			font-size: 3em;
+			padding-bottom: 1em;
+		}
+	}
+	//form
+	#suscription_form {
+		
+		fieldset{
+			display: none;
+			//when is active
+			&.active{
+				display: block;
+			}
+			//inputs
+			.input-holder {
+				position: relative;
+				display: block;
+				margin: 1em auto 2em;
+				width: 100%;
+				//icon
+				&::after{
+					content: "";
+					display: block;
+					position: absolute;
+					right: 10px;
+					top: 3px;
+					z-index: 3;
+				}
+
+					&.file{
+						&::after{
+							width: 26px;
+							height: 28px;
+							background-image: url('../img/clip.png'); 
+							right: 14%;
+							top: 18%;
+						}
+					}
+
+					&.picture{
+						&::after{
+							width: 36px;
+							height: 28px;
+							background-image: url('../img/images.png');
+							top: 16%;
+						}
+					}
+
+					&.kid{
+						&::after{
+							width: 54px;
+							height: 54px;
+							background-image: url('../img/lemon-kid.png');
+							top: -8%;
+							right: 0;
+						}
+					}
+
+					&.dad{
+						&::after{
+							width: 31px;
+							height: 31px;
+							background-image: url('../img/lemon-kid.png');
+						}
+					}
+
+					&.id-card{
+						&::after{
+							width: 33px;
+							height: 33px;
+							background-image: url('../img/id-card.png');
+						}
+					}
+
+					&.email{
+						&::after{
+							width: 29px;
+							height: 28px;
+							background-image: url('../img/id-email.png');
+						}
+					}
+
+					&.phone{
+						&::after{
+							width: 28px;
+							height: 30px;
+							background-image: url('../img/phone.png');
+						}
+					}
+
+				.dummy-field,
+				input {
+					display: block;
+					width: 90%;
+					border: none;
+					padding: 2% 10% 2% 3%;
+					background-color: $white;
+					color: $orange;
+					font-weight: bold;
+					position: relative;
+					text-transform: uppercase;
+					z-index: 1;
+
+					//mobile
+					@include mobile{
+						width: 80%;
+						margin: 0 auto;
+					}
+
+					&::-webkit-input-placeholder { 
+					  color: $orange;
+					  font-weight: bold;
+					  text-transform: uppercase;
+					}
+
+					&::-moz-placeholder { 
+					  color: $orange;
+					  font-weight: bold;
+					  text-transform: uppercase;
+					}
+
+					&:-ms-input-placeholder { 
+					  color: $orange;
+					  font-weight: bold;
+					  text-transform: uppercase;
+					}
+
+					&:-moz-placeholder {
+					  color: $orange;
+					  font-weight: bold;
+					  text-transform: uppercase; 
+					}
+
+					//type field
+					&.file{
+						opacity: 0;
+					}
+				}
+				.dummy-field{
+					position: absolute;
+					z-index: 0;
+					top: 0;
+				}
+			}
+			.side-left{
+				.input-holder{
+					input {
+						margin-right: 10%;
+						//mobile
+						@include mobile{
+							margin: 1em auto;
+						}
+					}
+				}
+			}
+			.side-right{
+				.input-holder{
+					input {
+						margin-left: 10%;
+						//mobile
+						@include mobile{
+							margin: 1em auto;
+						}
+					}
+				}
+			}
+
+			//bottom inputs
+			.asistant-frm{
+				text-align: center;
+				clear: both;
+				width: 100%;
+				.btn {
+					display: inline-block;
+					margin: .5em;
+					border-radius: 0;
+					padding: 0.5% 5%;
+				}
+			}
 		}
 	}
 }

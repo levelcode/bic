@@ -61,6 +61,14 @@ html,body{
 	p{
 		color: $gray;
 	}
+
+	//defaults
+	.btn,
+	.button-def {
+		@include button;
+		max-width: 230px;
+		padding: 5px 0;
+	}
 }
 
 //media queries
@@ -87,12 +95,4 @@ html,body{
     @content;
   }
 }
-
-//defaults
-.button-def{
-	@include button;
-	max-width: 230px;
-	padding: 5px 0;
-}
-
 

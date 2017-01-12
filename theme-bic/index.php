@@ -8,6 +8,8 @@
 		<?php get_template_part('inc/steps'); ?>
 		<!--prizes-->
 		<?php get_template_part('inc/prizes'); ?>
+		<!--form-->
+		<?php get_template_part('inc/form'); ?>
   </div><!-- /.row -->
 </div><!-- /.container -->
 
