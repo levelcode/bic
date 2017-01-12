@@ -368,7 +368,7 @@ html, body {
         margin: .5em;
         border-radius: 0;
         padding: 0.5% 5%; }
-    .form-suscription #suscription_form fieldset .step-3 a {
+    .form-suscription #suscription_form fieldset.step-3 a {
       color: #ffffff;
       text-decoration: underline;
       text-align: center; }
