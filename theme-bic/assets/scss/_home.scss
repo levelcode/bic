@@ -358,7 +358,10 @@
 					color: $white;
 					text-decoration: underline;
 					text-align: center;
-				}
+					width: 100%;
+				    display: block;
+				    margin-bottom: 2em;
+				} 
 			}
 		}
 	}

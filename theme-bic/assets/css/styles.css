@@ -371,4 +371,7 @@ html, body {
     .form-suscription #suscription_form fieldset.step-3 a {
       color: #ffffff;
       text-decoration: underline;
-      text-align: center; }
+      text-align: center;
+      width: 100%;
+      display: block;
+      margin-bottom: 2em; }
