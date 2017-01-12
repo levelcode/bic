@@ -151,11 +151,11 @@
 					display: block;
 					position: absolute;
 					right: 10px;
-					top: 13px;
+					top: 6px;
 					z-index: 3;
 					//mobile
 					@include sm-desktop{
-						right: 15%;
+						right: 3%;
 						top: 15%;
 					}
 				}
@@ -167,6 +167,10 @@
 							background-image: url('../img/clip.png'); 
 							right: 14%;
 							top: 18%;
+							//mobile
+							@include sm-desktop{
+								right: 3%;
+							}
 						}
 					}
 
@@ -176,6 +180,10 @@
 							height: 28px;
 							background-image: url('../img/images.png');
 							top: 16%;
+							//mobile
+							@include sm-desktop{
+								right: 3%;
+							}
 						}
 					}
 
@@ -186,6 +194,10 @@
 							background-image: url('../img/lemon-kid.png');
 							top: -8%;
 							right: 0;
+							//mobile
+							@include sm-desktop{
+								right: 0;
+							}
 						}
 					}
 
@@ -195,6 +207,10 @@
 							height: 31px;
 							background-image: url('../img/user.png');
 							right: 12%;
+							//mobile
+							@include sm-desktop{
+								right: 3%;
+							}
 						}
 					}
 
@@ -204,6 +220,10 @@
 							height: 33px;
 							background-image: url('../img/id-card.png');
 							right: 12%;
+							//mobile
+							@include sm-desktop{
+								right: 3%;
+							}
 						}
 					}
 
@@ -238,7 +258,7 @@
 
 					//mobile
 					@include sm-desktop{
-						width: 80%;
+						width: 100%;
 						margin: 0 auto;
 					}
 
@@ -276,6 +296,25 @@
 					z-index: 0;
 					top: 0;
 				}
+				
+				//fOR CHECKBOX
+				&.checkbox{
+					max-width: 255px;
+					input{
+						display: inline-block;
+						width: auto;
+						vertical-align: middle;
+					}
+					label{
+						display: inline-block;
+						vertical-align: middle;
+						color: $white;
+						font-weight: bold;
+						text-transform: uppercase;
+						font-size: 1.6em;
+					}
+					
+				}
 			}
 			.side-left{
 				.input-holder{
@@ -283,7 +322,7 @@
 						margin-right: 10%;
 						//mobile
 						@include sm-desktop{
-							margin: 1em auto;
+							margin: 0;
 						}
 					}
 				}
@@ -294,7 +333,7 @@
 						margin-left: 10%;
 						//mobile
 						@include sm-desktop{
-							margin: 1em auto;
+							margin: 0;
 						}
 					}
 				}
@@ -310,6 +349,15 @@
 					margin: .5em;
 					border-radius: 0;
 					padding: 0.5% 5%;
+				}
+			}
+
+			//step-3
+			.step-3{
+				a {
+					color: $white;
+					text-decoration: underline;
+					text-align: center;
 				}
 			}
 		}

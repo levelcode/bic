@@ -236,11 +236,11 @@ html, body {
         display: block;
         position: absolute;
         right: 10px;
-        top: 13px;
+        top: 6px;
         z-index: 3; }
         @media (max-width: 981px) {
           .form-suscription #suscription_form fieldset .input-holder::after {
-            right: 15%;
+            right: 3%;
             top: 15%; } }
       .form-suscription #suscription_form fieldset .input-holder.file::after {
         width: 26px;
@@ -248,27 +248,42 @@ html, body {
         background-image: url("../img/clip.png");
         right: 14%;
         top: 18%; }
+        @media (max-width: 981px) {
+          .form-suscription #suscription_form fieldset .input-holder.file::after {
+            right: 3%; } }
       .form-suscription #suscription_form fieldset .input-holder.picture::after {
         width: 36px;
         height: 28px;
         background-image: url("../img/images.png");
         top: 16%; }
+        @media (max-width: 981px) {
+          .form-suscription #suscription_form fieldset .input-holder.picture::after {
+            right: 3%; } }
       .form-suscription #suscription_form fieldset .input-holder.kid::after {
         width: 54px;
         height: 54px;
         background-image: url("../img/lemon-kid.png");
         top: -8%;
         right: 0; }
+        @media (max-width: 981px) {
+          .form-suscription #suscription_form fieldset .input-holder.kid::after {
+            right: 0; } }
       .form-suscription #suscription_form fieldset .input-holder.dad::after {
         width: 31px;
         height: 31px;
         background-image: url("../img/user.png");
         right: 12%; }
+        @media (max-width: 981px) {
+          .form-suscription #suscription_form fieldset .input-holder.dad::after {
+            right: 3%; } }
       .form-suscription #suscription_form fieldset .input-holder.id-card::after {
         width: 33px;
         height: 33px;
         background-image: url("../img/id-card.png");
         right: 12%; }
+        @media (max-width: 981px) {
+          .form-suscription #suscription_form fieldset .input-holder.id-card::after {
+            right: 3%; } }
       .form-suscription #suscription_form fieldset .input-holder.email::after {
         width: 29px;
         height: 28px;
@@ -292,7 +307,7 @@ html, body {
         @media (max-width: 981px) {
           .form-suscription #suscription_form fieldset .input-holder .dummy-field,
           .form-suscription #suscription_form fieldset .input-holder input {
-            width: 80%;
+            width: 100%;
             margin: 0 auto; } }
         .form-suscription #suscription_form fieldset .input-holder .dummy-field::-webkit-input-placeholder,
         .form-suscription #suscription_form fieldset .input-holder input::-webkit-input-placeholder {
@@ -321,16 +336,29 @@ html, body {
         position: absolute;
         z-index: 0;
         top: 0; }
+      .form-suscription #suscription_form fieldset .input-holder.checkbox {
+        max-width: 255px; }
+        .form-suscription #suscription_form fieldset .input-holder.checkbox input {
+          display: inline-block;
+          width: auto;
+          vertical-align: middle; }
+        .form-suscription #suscription_form fieldset .input-holder.checkbox label {
+          display: inline-block;
+          vertical-align: middle;
+          color: #ffffff;
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 1.6em; }
     .form-suscription #suscription_form fieldset .side-left .input-holder input {
       margin-right: 10%; }
       @media (max-width: 981px) {
         .form-suscription #suscription_form fieldset .side-left .input-holder input {
-          margin: 1em auto; } }
+          margin: 0; } }
     .form-suscription #suscription_form fieldset .side-right .input-holder input {
       margin-left: 10%; }
       @media (max-width: 981px) {
         .form-suscription #suscription_form fieldset .side-right .input-holder input {
-          margin: 1em auto; } }
+          margin: 0; } }
     .form-suscription #suscription_form fieldset .asistant-frm {
       text-align: center;
       clear: both;
@@ -340,3 +368,7 @@ html, body {
         margin: .5em;
         border-radius: 0;
         padding: 0.5% 5%; }
+    .form-suscription #suscription_form fieldset .step-3 a {
+      color: #ffffff;
+      text-decoration: underline;
+      text-align: center; }
