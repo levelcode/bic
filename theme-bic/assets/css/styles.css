@@ -236,8 +236,12 @@ html, body {
         display: block;
         position: absolute;
         right: 10px;
-        top: 3px;
+        top: 13px;
         z-index: 3; }
+        @media (max-width: 981px) {
+          .form-suscription #suscription_form fieldset .input-holder::after {
+            right: 15%;
+            top: 15%; } }
       .form-suscription #suscription_form fieldset .input-holder.file::after {
         width: 26px;
         height: 28px;
@@ -258,15 +262,17 @@ html, body {
       .form-suscription #suscription_form fieldset .input-holder.dad::after {
         width: 31px;
         height: 31px;
-        background-image: url("../img/lemon-kid.png"); }
+        background-image: url("../img/user.png");
+        right: 12%; }
       .form-suscription #suscription_form fieldset .input-holder.id-card::after {
         width: 33px;
         height: 33px;
-        background-image: url("../img/id-card.png"); }
+        background-image: url("../img/id-card.png");
+        right: 12%; }
       .form-suscription #suscription_form fieldset .input-holder.email::after {
         width: 29px;
         height: 28px;
-        background-image: url("../img/id-email.png"); }
+        background-image: url("../img/email.png"); }
       .form-suscription #suscription_form fieldset .input-holder.phone::after {
         width: 28px;
         height: 30px;
@@ -283,7 +289,7 @@ html, body {
         position: relative;
         text-transform: uppercase;
         z-index: 1; }
-        @media (max-width: 768px) {
+        @media (max-width: 981px) {
           .form-suscription #suscription_form fieldset .input-holder .dummy-field,
           .form-suscription #suscription_form fieldset .input-holder input {
             width: 80%;
@@ -317,12 +323,12 @@ html, body {
         top: 0; }
     .form-suscription #suscription_form fieldset .side-left .input-holder input {
       margin-right: 10%; }
-      @media (max-width: 768px) {
+      @media (max-width: 981px) {
         .form-suscription #suscription_form fieldset .side-left .input-holder input {
           margin: 1em auto; } }
     .form-suscription #suscription_form fieldset .side-right .input-holder input {
       margin-left: 10%; }
-      @media (max-width: 768px) {
+      @media (max-width: 981px) {
         .form-suscription #suscription_form fieldset .side-right .input-holder input {
           margin: 1em auto; } }
     .form-suscription #suscription_form fieldset .asistant-frm {

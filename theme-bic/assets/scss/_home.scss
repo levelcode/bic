@@ -151,8 +151,13 @@
 					display: block;
 					position: absolute;
 					right: 10px;
-					top: 3px;
+					top: 13px;
 					z-index: 3;
+					//mobile
+					@include sm-desktop{
+						right: 15%;
+						top: 15%;
+					}
 				}
 
 					&.file{
@@ -188,7 +193,8 @@
 						&::after{
 							width: 31px;
 							height: 31px;
-							background-image: url('../img/lemon-kid.png');
+							background-image: url('../img/user.png');
+							right: 12%;
 						}
 					}
 
@@ -197,6 +203,7 @@
 							width: 33px;
 							height: 33px;
 							background-image: url('../img/id-card.png');
+							right: 12%;
 						}
 					}
 
@@ -204,7 +211,7 @@
 						&::after{
 							width: 29px;
 							height: 28px;
-							background-image: url('../img/id-email.png');
+							background-image: url('../img/email.png'); 
 						}
 					}
 
@@ -230,7 +237,7 @@
 					z-index: 1;
 
 					//mobile
-					@include mobile{
+					@include sm-desktop{
 						width: 80%;
 						margin: 0 auto;
 					}
@@ -275,7 +282,7 @@
 					input {
 						margin-right: 10%;
 						//mobile
-						@include mobile{
+						@include sm-desktop{
 							margin: 1em auto;
 						}
 					}
@@ -286,7 +293,7 @@
 					input {
 						margin-left: 10%;
 						//mobile
-						@include mobile{
+						@include sm-desktop{
 							margin: 1em auto;
 						}
 					}
