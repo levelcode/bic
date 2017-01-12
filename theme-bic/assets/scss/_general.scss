@@ -56,7 +56,10 @@ html,body{
 	h2,
 	h3,
 	h4{
-		font-family: $cavort;
+		font-family: $mias;
+	}
+	p{
+		color: $gray;
 	}
 }
 
@@ -75,6 +78,12 @@ html,body{
 
 @mixin mobile {
   @media (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin sm-desktop {
+  @media (max-width: #{$sm-desktop-width}) {
     @content;
   }
 }

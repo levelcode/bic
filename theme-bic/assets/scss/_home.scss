@@ -24,3 +24,85 @@
 		}
 	}
 }
+
+//steps
+
+.how-works {
+	margin: 4em auto;
+	header{
+		h2{
+			text-align: center;
+			color: $black;
+			font-size: 3em;
+			padding-bottom: 1em;
+		}
+	}
+	//side left
+	.side-left{
+		//thumbnail
+		.item-step{
+			max-width: 290px;
+			//mobile
+			@include sm-desktop{
+				display: block;
+				margin: 1em auto;
+				float: none;
+			}
+			//thumb icon
+			figure{
+				img{
+					display: block;
+					max-width: 100%;
+					height: auto;
+					margin: 1em auto;
+				}
+			}
+			p {
+				position: relative;
+				display: block;
+				padding-left: 50px;
+				min-height: 100px;
+				span{
+					width: 40px;
+					height: 40px;
+					display: block;
+					position: absolute;
+					left: 0;
+					top: 30%;
+					margin-top: -20px;
+					color: $white;
+					background-color: $orange;
+					font-weight: 700;
+					text-align: center;
+					border-radius: 100%;
+					line-height: 40px;
+					font-size: 2em;
+				}
+			}
+		}
+	}
+	//video
+	.side-right{
+		iframe{
+			border-radius: 3em;
+		}
+	}
+}
+
+//prizes
+
+.prizes{
+	background-color: $lt-gray;
+	padding: 2em 0;
+	width: 100%;
+	img{
+		max-width: 100%;
+		display: block;
+		margin: 1em auto;
+	}
+	.side-left{
+		img{
+			margin-top: -1em;
+		}
+	}
+}

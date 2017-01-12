@@ -33,7 +33,9 @@ html, body {
   body h2,
   body h3,
   body h4 {
-    font-family: "Cavorting"; }
+    font-family: "Mias Scribblings"; }
+  html p, body p {
+    color: #5b5b5f; }
 
 .button-def {
   background: #db6d33;
@@ -144,3 +146,56 @@ html, body {
     text-align: center; }
     .banner.container .col-md-6 a.button-def {
       text-decoration: none; }
+
+.how-works {
+  margin: 4em auto; }
+  .how-works header h2 {
+    text-align: center;
+    color: #000000;
+    font-size: 3em;
+    padding-bottom: 1em; }
+  .how-works .side-left .item-step {
+    max-width: 290px; }
+    @media (max-width: 981px) {
+      .how-works .side-left .item-step {
+        display: block;
+        margin: 1em auto;
+        float: none; } }
+    .how-works .side-left .item-step figure img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 1em auto; }
+    .how-works .side-left .item-step p {
+      position: relative;
+      display: block;
+      padding-left: 50px;
+      min-height: 100px; }
+      .how-works .side-left .item-step p span {
+        width: 40px;
+        height: 40px;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 30%;
+        margin-top: -20px;
+        color: #ffffff;
+        background-color: #d36226;
+        font-weight: 700;
+        text-align: center;
+        border-radius: 100%;
+        line-height: 40px;
+        font-size: 2em; }
+  .how-works .side-right iframe {
+    border-radius: 3em; }
+
+.prizes {
+  background-color: #e8e8e8;
+  padding: 2em 0;
+  width: 100%; }
+  .prizes img {
+    max-width: 100%;
+    display: block;
+    margin: 1em auto; }
+  .prizes .side-left img {
+    margin-top: -1em; }
