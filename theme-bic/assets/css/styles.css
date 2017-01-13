@@ -292,6 +292,7 @@ html, body {
         width: 28px;
         height: 30px;
         background-image: url("../img/phone.png"); }
+      .form-suscription #suscription_form fieldset .input-holder select,
       .form-suscription #suscription_form fieldset .input-holder .dummy-field,
       .form-suscription #suscription_form fieldset .input-holder input {
         display: block;
@@ -305,30 +306,36 @@ html, body {
         text-transform: uppercase;
         z-index: 1; }
         @media (max-width: 981px) {
+          .form-suscription #suscription_form fieldset .input-holder select,
           .form-suscription #suscription_form fieldset .input-holder .dummy-field,
           .form-suscription #suscription_form fieldset .input-holder input {
             width: 100%;
             margin: 0 auto; } }
+        .form-suscription #suscription_form fieldset .input-holder select::-webkit-input-placeholder,
         .form-suscription #suscription_form fieldset .input-holder .dummy-field::-webkit-input-placeholder,
         .form-suscription #suscription_form fieldset .input-holder input::-webkit-input-placeholder {
           color: #d36226;
           font-weight: bold;
           text-transform: uppercase; }
+        .form-suscription #suscription_form fieldset .input-holder select::-moz-placeholder,
         .form-suscription #suscription_form fieldset .input-holder .dummy-field::-moz-placeholder,
         .form-suscription #suscription_form fieldset .input-holder input::-moz-placeholder {
           color: #d36226;
           font-weight: bold;
           text-transform: uppercase; }
+        .form-suscription #suscription_form fieldset .input-holder select:-ms-input-placeholder,
         .form-suscription #suscription_form fieldset .input-holder .dummy-field:-ms-input-placeholder,
         .form-suscription #suscription_form fieldset .input-holder input:-ms-input-placeholder {
           color: #d36226;
           font-weight: bold;
           text-transform: uppercase; }
+        .form-suscription #suscription_form fieldset .input-holder select:-moz-placeholder,
         .form-suscription #suscription_form fieldset .input-holder .dummy-field:-moz-placeholder,
         .form-suscription #suscription_form fieldset .input-holder input:-moz-placeholder {
           color: #d36226;
           font-weight: bold;
           text-transform: uppercase; }
+        .form-suscription #suscription_form fieldset .input-holder select.file,
         .form-suscription #suscription_form fieldset .input-holder .dummy-field.file,
         .form-suscription #suscription_form fieldset .input-holder input.file {
           opacity: 0; }

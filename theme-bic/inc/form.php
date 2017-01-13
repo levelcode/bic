@@ -4,7 +4,7 @@
 			<h2>Regístrate</h2>
 		</header>
 		<form id="suscription_form">
-			
+
 			<div id="messages"></div>
 
 			<!--frists step-->
@@ -59,13 +59,26 @@
 			</fieldset>
 
 			<!--step 3-->
-			
+
 			<fieldset class="step-3">
-				<span class="input-holder checkbox">
-					<input type="checkbox" name="terms" id="terms"> 
-					<label>Acepto términos y condiciones</label>
-				</span>
-				<a href="#">Ver términos y condiciones</a>
+
+				<div class="col-md-6 side-left">
+					<span class="input-holder select">
+						<select name="category">
+							<option value="junior">Junior</option>
+							<option value="senior">Senior</option>
+						</select>
+					</span>
+				</div>
+				
+				<div class="col-md-6 side-right">
+					<span class="input-holder checkbox">
+						<input type="checkbox" name="terms" id="terms">
+						<label>Acepto términos y condiciones</label>
+					</span>
+					<a href="#">Ver términos y condiciones</a>
+				</div>
+
 				<div class="asistant-frm">
 					<button class="step-3-back btn">Anterior</button>
 					<button id="send_data" class="step-3-next btn">Finalizar</button>
