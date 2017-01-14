@@ -22,10 +22,10 @@
 				</div>
 				<div class="col-md-6 side-right">
 					<span class="input-holder picture">
-						<input type="text" name="title"  placeholder="nombre de la obra">
+						<input type="text" name="title" class="name-post" placeholder="nombre de la obra">
 					</span>
 					<span class="input-holder kid">
-						<input type="text" name="name-art"  placeholder="nombre de tu pequeño artista">
+						<input type="text" name="name-art" class="name-art"  placeholder="nombre de tu pequeño artista">
 					</span>
 				</div>
 				<div class="asistant-frm">
@@ -38,18 +38,18 @@
 			<fieldset class="step-2">
 				<div class="col-md-6 side-left">
 					<span class="input-holder dad">
-						<input type="text" name="dad"  placeholder="nombre del responsable">
+						<input type="text" name="dad" class="name-resp"  placeholder="nombre del responsable">
 					</span>
 					<span class="input-holder id-card">
-						<input type="text" name="id-card"  placeholder="nº. identidad">
+						<input type="text" name="id-card" class="id-card"  placeholder="nº. identidad">
 					</span>
 				</div>
 				<div class="col-md-6 side-right">
 					<span class="input-holder email">
-						<input type="email" name="email" placeholder="Email">
+						<input type="email" name="email" class="email" placeholder="Email">
 					</span>
 					<span class="input-holder phone">
-						<input type="tel" name="tel" placeholder="Celular">
+						<input type="tel" name="tel" class="tel" placeholder="Celular">
 					</span>
 				</div>
 				<div class="asistant-frm">
@@ -64,7 +64,7 @@
 
 				<div class="col-md-6 side-left">
 					<span class="input-holder select">
-						<select name="category">
+						<select name="category" class="category">
 							<option value="junior">Junior</option>
 							<option value="senior">Senior</option>
 						</select>

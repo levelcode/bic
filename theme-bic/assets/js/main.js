@@ -32,5 +32,25 @@
 			$formCont.find('.step-2').addClass('active');
 			$formCont.find('.step-3').removeClass('active');
 		});
+
+		//Ajax send method
+		$('#suscription_form #send_data').on('click',function(e) {
+			
+			e.preventDefault();
+
+			//Get form values
+			var posttitle = $('#suscription_form .name-post').val(),
+				postnameart = $('#suscription_form .name-art').val(),
+				postnameresp = $('#suscription_form .name-resp').val(),
+				postdocument = $('#suscription_form .id-card').val(),
+				postmail = $('#suscription_form .id-card').val(),
+				postcat = $('#suscription_form .category').val(),
+				posttel = $('#suscription_form .tel').val();
+			
+
+			//Trigger da function
+			apfaddpost(posttitle,postnameart,postnameresp,postdocument,postmail,postphoto,postdraw,postcat,posttel);
+
+		});
 	
 })(jQuery);
