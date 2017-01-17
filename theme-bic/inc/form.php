@@ -13,11 +13,11 @@
 				<div class="col-md-6 side-left">
 					<span class="input-holder file">
 						<input type="file" name="file-draw" placeholder="Adjuntar dibujo" class="file">
-						<div class="dummy-field">Adjuntar dibujo</div>
+						<div class="dummy-field">Adjuntar Obra</div>
 					</span>
 					<span class="input-holder file">
 						<input type="file" name="file-photo" placeholder="Adjuntar foto" class="file">
-						<div class="dummy-field">Adjuntar foto</div>
+						<div class="dummy-field">Adjuntar foto de colores bic</div>
 					</span>
 				</div>
 				<div class="col-md-6 side-right">
@@ -65,8 +65,9 @@
 				<div class="col-md-6 side-left">
 					<span class="input-holder select">
 						<select name="category" class="category">
-							<option value="4">Junior</option>
-							<option value="3">Senior</option>
+							<option value="0" selected>Selecciona categoría</option>
+							<option value="4">5 - 8 Años</option>
+							<option value="3">9 - 12 Años</option>
 						</select>
 					</span>
 				</div>

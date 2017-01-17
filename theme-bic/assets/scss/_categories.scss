@@ -1,0 +1,89 @@
+//------------------------------
+// Categories
+//------------------------------
+.category{
+	.category-head{
+		img{
+			display: block;
+			margin: 4em auto;
+		}
+	}
+
+	//loop categories
+	.content-loop{
+		//item
+		.post-item{
+			position: relative;
+			figure{
+				width: 100%;
+				border-radius: 2em;
+				overflow: hidden;
+				box-shadow: 0 0 1em #ccc;
+				position: relative;
+				z-index: 1;
+				//mask of image
+				.mask{
+					display: block;
+					width: 100%;
+					height: 200px;
+					overflow: hidden;
+					img{
+						display: block;
+						width: 100%;
+						height: auto;
+					}
+				}
+				.caption{
+					background-color: $white;
+					padding: 5%;
+					h3{
+						font-family: $cavort;
+						color: $gray;
+						margin-top: 0;
+					}
+					h4{
+						font-family: $arialR;
+						color: $lt-gray2;
+					}
+				}
+
+				//hover
+				a {
+					display: block;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					background-color: rgba(0,0,0,0.8);
+					background-image: url('../img/glass-icon.png');
+					background-position: center center;
+					background-repeat: no-repeat;
+					opacity: 0;
+					transition: all ease .3s;
+					text-indent: -99999px;
+				}
+			}
+			.vota{
+				display: block;
+				width: 55px;
+				height: 55px;
+				background-image: url('../img/vote-icon.png');
+				position: absolute;
+				bottom: -15px;
+				right: -15px;
+				text-indent: -99999px;
+				z-index: 3;
+			}
+			// hover post
+			&:hover{
+				figure {
+					a{
+						opacity: 1;
+						transition: all ease-in .3s;
+					}
+				}
+			}
+		}
+	}
+}

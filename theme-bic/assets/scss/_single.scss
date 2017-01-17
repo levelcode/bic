@@ -1,0 +1,48 @@
+//------------------------------
+// Single
+//------------------------------
+.single{
+	//header
+	.header-single{
+		margin-top: 120px;
+		text-align: center;
+		h2{
+			font-size: 3em;
+			font-family: $cavort;
+			color: $gray;	
+		}
+		h3{
+			font-size: 2em;
+			font-family: $arialR;
+			color: $lt-gray2;	
+		}
+	}
+
+	//post entry
+	.post-entry{
+		background-image: url('../img/bg_prices.png');
+		background-position: bottom center;	
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		padding: 2em 0;
+		width: 100%;
+		img{
+			display: block;
+			max-width: 700px;
+			width: 90%;
+			height: auto;
+			margin: 2em auto;
+			padding: 1em;
+			box-shadow: 0 0 1em #333;
+			background-color: $white;
+		}
+	}
+
+	.shares{
+		text-align: center;
+		> div{
+			display: inline-block;
+			margin: 1em;
+		}
+	}	
+}

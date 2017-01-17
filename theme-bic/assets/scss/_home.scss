@@ -97,20 +97,47 @@
 //------------------------------
 //prizes
 //------------------------------
-
+.votes,
 .prizes{
-	background-color: $lt-gray;
+	background-image: url('../img/bg_prices.png');
+	background-position: bottom center;	
+	background-size: 100% auto;
+	background-repeat: no-repeat;
 	padding: 2em 0;
 	width: 100%;
+	header{
+		h2{
+			text-align: center;
+			color: $black;
+			font-size: 3em;
+			padding-bottom: 1em;
+			//big desktop
+			@include bdesktop{
+				padding-bottom: 3em;
+			}
+		}
+	}
 	img{
 		max-width: 100%;
 		display: block;
 		margin: 1em auto;
 	}
-	.side-left{
-		img{
-			margin-top: -1em;
+}
+
+.votes{
+	background-image: none;
+	header{
+		h2{
+			text-align: center;
+			color: $black;
+			font-size: 3em;
+			padding-bottom: 1em;		
 		}
+	}
+	img{
+		width: auto;
+		height: auto;
+		max-height: 256px;
 	}
 }
 
@@ -145,6 +172,13 @@
 				display: block;
 				margin: 1em auto 2em;
 				width: 100%;
+				//Label for form
+				label {
+					color: $white;
+					font-weight: bold;
+					text-transform: uppercase;
+					font-size: 1.2em;
+				}
 				//icon
 				&::after{
 					content: "";
@@ -299,11 +333,12 @@
 
 				//fOR CHECKBOX
 				&.checkbox{
-					max-width: 255px;
 					input{
 						display: inline-block;
 						width: auto;
 						vertical-align: middle;
+						width: 5%;
+						margin-left: 0 !important; 
 					}
 					label{
 						display: inline-block;
@@ -312,6 +347,7 @@
 						font-weight: bold;
 						text-transform: uppercase;
 						font-size: 1.6em;
+						width: 90%;
 					}
 
 				}
@@ -357,10 +393,11 @@
 				a { 
 					color: $white;
 					text-decoration: underline;
-					text-align: center;
-					width: 100%;
-				    display: block;
-				    margin-bottom: 2em;
+					text-align: left;
+					width: auto;
+					display: block;
+					margin-bottom: 2em;
+					margin-left: 26%;
 				}
 			}
 		}

@@ -125,6 +125,101 @@ html, body {
             text-align: center;
             display: block; } }
 
+.category .category-head img {
+  display: block;
+  margin: 4em auto; }
+
+.category .content-loop .post-item {
+  position: relative; }
+  .category .content-loop .post-item figure {
+    width: 100%;
+    border-radius: 2em;
+    overflow: hidden;
+    box-shadow: 0 0 1em #ccc;
+    position: relative;
+    z-index: 1; }
+    .category .content-loop .post-item figure .mask {
+      display: block;
+      width: 100%;
+      height: 200px;
+      overflow: hidden; }
+      .category .content-loop .post-item figure .mask img {
+        display: block;
+        width: 100%;
+        height: auto; }
+    .category .content-loop .post-item figure .caption {
+      background-color: #ffffff;
+      padding: 5%; }
+      .category .content-loop .post-item figure .caption h3 {
+        font-family: "Cavorting";
+        color: #5b5b5f;
+        margin-top: 0; }
+      .category .content-loop .post-item figure .caption h4 {
+        font-family: "Arial Rounded MT";
+        color: #aeadb3; }
+    .category .content-loop .post-item figure a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      background-image: url("../img/glass-icon.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: all ease .3s;
+      text-indent: -99999px; }
+  .category .content-loop .post-item .vota {
+    display: block;
+    width: 55px;
+    height: 55px;
+    background-image: url("../img/vote-icon.png");
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    text-indent: -99999px;
+    z-index: 3; }
+  .category .content-loop .post-item:hover figure a {
+    opacity: 1;
+    transition: all ease-in .3s; }
+
+.single .header-single {
+  margin-top: 120px;
+  text-align: center; }
+  .single .header-single h2 {
+    font-size: 3em;
+    font-family: "Cavorting";
+    color: #5b5b5f; }
+  .single .header-single h3 {
+    font-size: 2em;
+    font-family: "Arial Rounded MT";
+    color: #aeadb3; }
+
+.single .post-entry {
+  background-image: url("../img/bg_prices.png");
+  background-position: bottom center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  padding: 2em 0;
+  width: 100%; }
+  .single .post-entry img {
+    display: block;
+    max-width: 700px;
+    width: 90%;
+    height: auto;
+    margin: 2em auto;
+    padding: 1em;
+    box-shadow: 0 0 1em #333;
+    background-color: #ffffff; }
+
+.single .shares {
+  text-align: center; }
+  .single .shares > div {
+    display: inline-block;
+    margin: 1em; }
+
 .banner.container {
   background: #f9b600;
   /* Old browsers */
@@ -194,16 +289,41 @@ html, body {
   .how-works .side-right iframe {
     border-radius: 3em; }
 
+.votes,
 .prizes {
-  background-color: #e8e8e8;
+  background-image: url("../img/bg_prices.png");
+  background-position: bottom center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
   padding: 2em 0;
   width: 100%; }
+  .votes header h2,
+  .prizes header h2 {
+    text-align: center;
+    color: #000000;
+    font-size: 3em;
+    padding-bottom: 1em; }
+    @media (min-width: 1481px) {
+      .votes header h2,
+      .prizes header h2 {
+        padding-bottom: 3em; } }
+  .votes img,
   .prizes img {
     max-width: 100%;
     display: block;
     margin: 1em auto; }
-  .prizes .side-left img {
-    margin-top: -1em; }
+
+.votes {
+  background-image: none; }
+  .votes header h2 {
+    text-align: center;
+    color: #000000;
+    font-size: 3em;
+    padding-bottom: 1em; }
+  .votes img {
+    width: auto;
+    height: auto;
+    max-height: 256px; }
 
 .form-suscription {
   background: #f9b600;
@@ -231,6 +351,11 @@ html, body {
       display: block;
       margin: 1em auto 2em;
       width: 100%; }
+      .form-suscription #suscription_form fieldset .input-holder label {
+        color: #ffffff;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1.2em; }
       .form-suscription #suscription_form fieldset .input-holder::after {
         content: "";
         display: block;
@@ -343,19 +468,20 @@ html, body {
         position: absolute;
         z-index: 0;
         top: 0; }
-      .form-suscription #suscription_form fieldset .input-holder.checkbox {
-        max-width: 255px; }
-        .form-suscription #suscription_form fieldset .input-holder.checkbox input {
-          display: inline-block;
-          width: auto;
-          vertical-align: middle; }
-        .form-suscription #suscription_form fieldset .input-holder.checkbox label {
-          display: inline-block;
-          vertical-align: middle;
-          color: #ffffff;
-          font-weight: bold;
-          text-transform: uppercase;
-          font-size: 1.6em; }
+      .form-suscription #suscription_form fieldset .input-holder.checkbox input {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+        width: 5%;
+        margin-left: 0 !important; }
+      .form-suscription #suscription_form fieldset .input-holder.checkbox label {
+        display: inline-block;
+        vertical-align: middle;
+        color: #ffffff;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1.6em;
+        width: 90%; }
     .form-suscription #suscription_form fieldset .side-left .input-holder input {
       margin-right: 10%; }
       @media (max-width: 981px) {
@@ -378,7 +504,27 @@ html, body {
     .form-suscription #suscription_form fieldset.step-3 a {
       color: #ffffff;
       text-decoration: underline;
-      text-align: center;
-      width: 100%;
+      text-align: left;
+      width: auto;
       display: block;
-      margin-bottom: 2em; }
+      margin-bottom: 2em;
+      margin-left: 26%; }
+
+footer {
+  width: 100%;
+  text-align: center;
+  background: #000000;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #000000 0%, #30302f 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #000000 0%, #30302f 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #000000 0%, #30302f 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#30302f',GradientType=0 );
+  /* IE6-9 */
+  padding: 20px 0 10px;
+  margin-top: 2em; }
+  footer p {
+    color: white;
+    font-weight: bold; }

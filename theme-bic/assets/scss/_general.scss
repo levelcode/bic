@@ -78,6 +78,12 @@ html,body{
   }
 }
 
+@mixin bdesktop {
+  @media (min-width: #{$big-desktop-width}) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
     @content;
@@ -89,6 +95,7 @@ html,body{
     @content;
   }
 }
+
 
 @mixin sm-desktop {
   @media (max-width: #{$sm-desktop-width}) {
