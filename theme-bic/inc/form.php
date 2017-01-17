@@ -65,12 +65,12 @@
 				<div class="col-md-6 side-left">
 					<span class="input-holder select">
 						<select name="category" class="category">
-							<option value="junior">Junior</option>
-							<option value="senior">Senior</option>
+							<option value="4">Junior</option>
+							<option value="3">Senior</option>
 						</select>
 					</span>
 				</div>
-				
+
 				<div class="col-md-6 side-right">
 					<span class="input-holder checkbox">
 						<input type="checkbox" name="terms" id="terms">

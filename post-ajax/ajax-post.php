@@ -18,10 +18,13 @@
      wp_enqueue_script('apf', APFSURL.'/js/up-script.js', array('jquery'));
      wp_localize_script( 'apf', 'apfajax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
  }
- add_action('wp_enqueue_scripts', apf_enqueuescripts);
 
  //Lectura post
- function apf_addpost() {
+function addpost() {
+   echo "hola";
+   var_dump($_FILES);
+
+   var_dump($_POST);
 
    //Variables post
    $title = $_POST['title'];
@@ -33,60 +36,68 @@
    $categoria = $_POST['category'];
    $fotoDibujo = $_FILES['file-draw'];
    $fotoArtista = $_FILES['file-photo'];
-   //Upload files
 
+   //add post
+   $post_id = wp_insert_post( array(
+       'post_title'        => $title,
+       'post_status'       => 'publish',
+       'post_author'       => '2',
+       'post_category'     => array($categoria)
+   ));
 
-   //Conditional for duplicate post
+   if ( $post_id != 0 )
+    {
+        $results = '*Post Added';
+    }
+    else {
+        $results = '*Error occurred while adding the post';
+    }
 
-   if (!get_page_by_title($title, 'OBJECT', 'post') ){
+   //Update meta-data__comments
+   update_post_meta($post_id,'Correo',$correo);
+   update_post_meta($post_id,'Celular',$telefono);
+   update_post_meta($post_id,'Documento',$documento);
+   update_post_meta($post_id,'Nombre',$nombreArtista);
+   update_post_meta($post_id,'Responsable',$nombreResponsable);
+   //get permalink
 
-     //add post
-     $post_id = wp_insert_post( array(
-         'post_title'        => $title,
-         'post_status'       => 'publish',
-         'post_author'       => '2'
-     ));
+   $link_post = get_permalink($post_id);
 
-     //Update meta-data__comments
-     update_post_meta($post_id,'Correo',$correo);
-     update_post_meta($post_id,'Celular',$telefono);
-     update_post_meta($post_id,'Documento',$documento);
-     update_post_meta($post_id,'Nombre',$nombreArtista);
-     update_post_meta($post_id,'Responsable',$nombreResponsable);
-     //get permalink
+   agp_process_woofile($fotoDibujo, $post_id, true );
+   agp_process_woofile($fotoArtista, $post_id);
 
-     $link_post = get_permalink($post_id);
+   die($results);
+}
 
-     agp_process_woofile($fotoDibujo, $post_id, $nombreArtista);
-     agp_process_woofile($fotoArtista, $post_id, $nombreArtista );
+//Function for upload files
+function agp_process_woofile ( $file, $post_id = 0 , $set_as_featured = false ) {
 
-   }else{
-       $error = "El Nombre de post ya existe";
-   }
- }
+    $upload = wp_upload_bits( $file['name'], null, file_get_contents( $file['tmp_name'] ) );
 
+    $wp_filetype = wp_check_filetype( basename( $upload['file'] ), null );
 
- //Function for upload files
- function agp_process_woofile($files, $post_id, $caption){
-     require_once(ABSPATH . "wp-admin" . '/includes/image.php');
-     require_once(ABSPATH . "wp-admin" . '/includes/file.php');
-     require_once(ABSPATH . "wp-admin" . '/includes/media.php');
+    $wp_upload_dir = wp_upload_dir();
 
-     $attachment_id = media_handle_upload($files, $post_id);
+    $attachment = array(
+        'guid' => $wp_upload_dir['baseurl'] . _wp_relative_upload_path( $upload['file'] ),
+        'post_mime_type' => $wp_filetype['type'],
+        'post_title' => preg_replace('/\.[^.]+$/', '', basename( $upload['file'] )),
+        'post_content' => '',
+        'post_status' => 'inherit'
+    );
 
-     $attachment_url = wp_get_attachment_url($attachment_id);
-     add_post_meta($post_id, '_file_paths', $attachment_url);
+    $attach_id = wp_insert_attachment( $attachment, $upload['file'], $post_id );
 
-     $attachment_data = array(
-       'ID' => $attachment_id,
-       'post_excerpt' => $caption
-     );
+    require_once(ABSPATH . 'wp-admin/includes/image.php');
 
-     wp_update_post($attachment_data);
+    $attach_data = wp_generate_attachment_metadata( $attach_id, $upload['file'] );
+    wp_update_attachment_metadata( $attach_id, $attach_data );
 
-     return $attachment_id;
- }
+    if( $set_as_featured == true ) {
+        update_post_meta( $post_id, '_thumbnail_id', $attach_id );
+    }
+}
 
- // Llamado ajax api wordpress
- add_action( 'wp_ajax_nopriv_apf_addpost', 'apf_addpost' );
- add_action( 'wp_ajax_apf_addpost', 'apf_addpost' );
+ add_action('wp_enqueue_scripts', 'apf_enqueuescripts');
+ add_action( 'wp_ajax_nopriv_apf_addpost', 'addpost' );
+ add_action( 'wp_ajax_apf_addpost', 'addpost' );
