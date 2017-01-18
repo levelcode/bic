@@ -1,7 +1,7 @@
 <div class="form-suscription" id="registro">
 	<div class="container">
 		<header>
-			<h2>Regístrate</h2>
+			<h2>Regístra a tu pequeño artista</h2>
 		</header>
 		<form id="suscription_form">
 
@@ -38,10 +38,17 @@
 			<fieldset class="step-2">
 				<div class="col-md-6 side-left">
 					<span class="input-holder dad">
+						<span class="prompt-text">
+							Solo podrán participar en la actividad las personas mayores de dieciocho (18) años que tengan la patria potestad de su hijo. De no cumplir con lo anterior, el Organizador descalificará a ese participante.
+						</span>
+						<span class="fk-input">?</span>
 						<input type="text" name="dad" class="name-resp"  placeholder="nombre del responsable">
 					</span>
 					<span class="input-holder id-card">
-						<input type="text" name="id-card" class="id-card"  placeholder="nº. identidad">
+						<input type="text" name="id-card" class="id-card"  placeholder="Cédula del responsable">
+					</span>
+					<span class="input-holder id-card kid">
+						<input type="text" name="id-card-kid" class="id-card"  placeholder="nº. identidad del pequeño artista">
 					</span>
 				</div>
 				<div class="col-md-6 side-right">
@@ -77,7 +84,7 @@
 						<input type="checkbox" name="terms" id="terms">
 						<label>Acepto términos y condiciones</label>
 					</span>
-					<a href="#">Ver términos y condiciones</a>
+					<a href="<?php bloginfo('template_url')?>/assets/terminos.pdf" target="_blank">Ver términos y condiciones</a>
 				</div>
 
 				<div class="asistant-frm">

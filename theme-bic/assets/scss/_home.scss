@@ -40,6 +40,15 @@
 			color: $black;
 			font-size: 3em;
 			padding-bottom: 1em;
+			span{
+				display: inline-block;
+				-moz-transform: scaleX(-1);
+				-o-transform: scaleX(-1);
+				-webkit-transform: scaleX(-1);
+				transform: scaleX(-1);
+				filter: FlipH;
+				vertical-align: top;
+			}
 		}
 	}
 	//side left
@@ -105,6 +114,9 @@
 	background-repeat: no-repeat;
 	padding: 2em 0;
 	width: 100%;
+	@include sm-desktop{
+		background-size: 200% auto;
+	}
 	header{
 		h2{
 			text-align: center;
@@ -170,6 +182,7 @@
 				color: white;
 				margin: 1em auto;
 				font-family: $cavort;
+				font-size: 1.7em;
 				border-radius: .5em;
 			}
 		}
@@ -260,6 +273,59 @@
 								right: 3%;
 							}
 						}
+						.fk-input{
+							display: block;
+							position: absolute;
+							top: 7px;
+							left: 7px;
+							font-size: 20px;
+							font-weight: bold;
+							color: $lt-gray2;
+							cursor: pointer;
+							z-index: 4;
+							@include sm-desktop{
+								top: 35%;
+							}
+						}
+						//prompt text
+						.prompt-text{
+							display: block;
+							position: absolute;
+							color: $white;
+							background-color: $purple;
+							width: 150px;
+							left: -170px;
+							top: -65px;
+							font-size: 10px;
+							text-transform: uppercase;
+							padding: 10px;
+							display: none;
+							z-index: 5;
+							&::after{
+								content: "";
+								display: block;
+								width: 12px;
+								height: 24px;
+								background-image: url('../img/caret-left.png');
+								position: absolute;
+								top: 42%;
+								right: -11px;
+							}
+						}
+
+						@include defdesktop{
+							.prompt-text{
+								width: 250px;
+								left: 0;
+								top: 55px;
+								&::after{
+									top: -16px;
+									right: auto;
+									left: 12px;
+									transform: rotate(-90deg)
+								}
+							}
+						}
 					}
 
 					&.id-card{
@@ -271,6 +337,15 @@
 							//mobile
 							@include sm-desktop{
 								right: 3%;
+							}
+						}
+						&.kid{
+							&::after{
+								top: 10%;
+								//mobile
+								@include sm-desktop{
+									right: 3%;
+								}
 							}
 						}
 					}
@@ -296,7 +371,7 @@
 					display: block;
 					width: 90%;
 					border: none;
-					padding: 2% 10% 2% 3%;
+					padding: 2% 10% 2% 5%;
 					background-color: $white;
 					color: $orange;
 					font-weight: bold;
@@ -308,6 +383,8 @@
 					@include sm-desktop{
 						width: 100%;
 						margin: 0 auto;
+						padding: 6% 10% 6% 9%;
+						font-size: .7em;
 					}
 
 					&::-webkit-input-placeholder {

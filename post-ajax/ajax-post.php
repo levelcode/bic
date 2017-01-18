@@ -31,11 +31,13 @@ function addpost() {
    $nombreArtista = $_POST['name-art'];
    $nombreResponsable = $_POST['dad'];
    $documento = $_POST['id-card'];
+   $documentoNino = $_POST['id-card-kid'];
    $correo = $_POST['email'];
    $telefono = $_POST['tel'];
    $categoria = $_POST['category'];
    $fotoDibujo = $_FILES['file-draw'];
    $fotoArtista = $_FILES['file-photo'];
+
 
    //add post
    $post_id = wp_insert_post( array(
@@ -59,6 +61,7 @@ function addpost() {
    update_post_meta($post_id,'Documento',$documento);
    update_post_meta($post_id,'Nombre',$nombreArtista);
    update_post_meta($post_id,'Responsable',$nombreResponsable);
+   update_post_meta($post_id,'Documento Pequeno Artista',$documentoNino);
    //get permalink
 
    $link_post = get_permalink($post_id);

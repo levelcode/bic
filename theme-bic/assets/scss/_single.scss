@@ -26,6 +26,9 @@
 		background-repeat: no-repeat;
 		padding: 2em 0;
 		width: 100%;
+		@include sm-desktop{
+			background-size: 200% auto;
+		}
 		img{
 			display: block;
 			max-width: 700px;

@@ -84,6 +84,12 @@ html,body{
   }
 }
 
+@mixin defdesktop {
+  @media (max-width: #{$big-desktop-width}) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
     @content;

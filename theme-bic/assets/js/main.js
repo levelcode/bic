@@ -71,4 +71,9 @@
 			$('#send_data').show(400);
 	});
 
+	//prompt text
+	$('.fk-input').click(function(event) {
+		$(this).siblings('.prompt-text').fadeToggle(400);
+	});
+
 })(jQuery);

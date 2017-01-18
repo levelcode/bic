@@ -131,10 +131,14 @@ html, body {
 
 .category .category-head img {
   display: block;
-  margin: 4em auto; }
+  margin: 4em auto;
+  max-width: 90%; }
 
 .category .content-loop .post-item {
   position: relative; }
+  @media (max-width: 981px) {
+    .category .content-loop .post-item {
+      margin-bottom: 2em; } }
   .category .content-loop .post-item figure {
     width: 100%;
     border-radius: 2em;
@@ -226,6 +230,9 @@ html, body {
   background-repeat: no-repeat;
   padding: 2em 0;
   width: 100%; }
+  @media (max-width: 981px) {
+    .single .post-entry {
+      background-size: 200% auto; } }
   .single .post-entry img {
     display: block;
     max-width: 700px;
@@ -283,6 +290,14 @@ html, body {
     color: #000000;
     font-size: 3em;
     padding-bottom: 1em; }
+    .how-works header h2 span {
+      display: inline-block;
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      filter: FlipH;
+      vertical-align: top; }
   .how-works .side-left .item-step {
     max-width: 290px; }
     @media (max-width: 981px) {
@@ -326,6 +341,10 @@ html, body {
   background-repeat: no-repeat;
   padding: 2em 0;
   width: 100%; }
+  @media (max-width: 981px) {
+    .votes,
+    .prizes {
+      background-size: 200% auto; } }
   .votes header h2,
   .prizes header h2 {
     text-align: center;
@@ -382,6 +401,7 @@ html, body {
       color: white;
       margin: 1em auto;
       font-family: "Cavorting";
+      font-size: 1.7em;
       border-radius: .5em; }
   .form-suscription #suscription_form fieldset {
     display: none; }
@@ -442,6 +462,51 @@ html, body {
         @media (max-width: 981px) {
           .form-suscription #suscription_form fieldset .input-holder.dad::after {
             right: 3%; } }
+      .form-suscription #suscription_form fieldset .input-holder.dad .fk-input {
+        display: block;
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #aeadb3;
+        cursor: pointer;
+        z-index: 4; }
+        @media (max-width: 981px) {
+          .form-suscription #suscription_form fieldset .input-holder.dad .fk-input {
+            top: 35%; } }
+      .form-suscription #suscription_form fieldset .input-holder.dad .prompt-text {
+        display: block;
+        position: absolute;
+        color: #ffffff;
+        background-color: #3e2e89;
+        width: 150px;
+        left: -170px;
+        top: -65px;
+        font-size: 10px;
+        text-transform: uppercase;
+        padding: 10px;
+        display: none;
+        z-index: 5; }
+        .form-suscription #suscription_form fieldset .input-holder.dad .prompt-text::after {
+          content: "";
+          display: block;
+          width: 12px;
+          height: 24px;
+          background-image: url("../img/caret-left.png");
+          position: absolute;
+          top: 42%;
+          right: -11px; }
+      @media (max-width: 1481px) {
+        .form-suscription #suscription_form fieldset .input-holder.dad .prompt-text {
+          width: 250px;
+          left: 0;
+          top: 55px; }
+          .form-suscription #suscription_form fieldset .input-holder.dad .prompt-text::after {
+            top: -16px;
+            right: auto;
+            left: 12px;
+            transform: rotate(-90deg); } }
       .form-suscription #suscription_form fieldset .input-holder.id-card::after {
         width: 33px;
         height: 33px;
@@ -449,6 +514,11 @@ html, body {
         right: 12%; }
         @media (max-width: 981px) {
           .form-suscription #suscription_form fieldset .input-holder.id-card::after {
+            right: 3%; } }
+      .form-suscription #suscription_form fieldset .input-holder.id-card.kid::after {
+        top: 10%; }
+        @media (max-width: 981px) {
+          .form-suscription #suscription_form fieldset .input-holder.id-card.kid::after {
             right: 3%; } }
       .form-suscription #suscription_form fieldset .input-holder.email::after {
         width: 29px;
@@ -464,7 +534,7 @@ html, body {
         display: block;
         width: 90%;
         border: none;
-        padding: 2% 10% 2% 3%;
+        padding: 2% 10% 2% 5%;
         background-color: #ffffff;
         color: #d36226;
         font-weight: bold;
@@ -476,7 +546,9 @@ html, body {
           .form-suscription #suscription_form fieldset .input-holder .dummy-field,
           .form-suscription #suscription_form fieldset .input-holder input {
             width: 100%;
-            margin: 0 auto; } }
+            margin: 0 auto;
+            padding: 6% 10% 6% 9%;
+            font-size: .7em; } }
         .form-suscription #suscription_form fieldset .input-holder select::-webkit-input-placeholder,
         .form-suscription #suscription_form fieldset .input-holder .dummy-field::-webkit-input-placeholder,
         .form-suscription #suscription_form fieldset .input-holder input::-webkit-input-placeholder {
