@@ -37,6 +37,10 @@
 		$('#suscription_form #send_data').on('click',function(e) {
 
 			e.preventDefault();
+
+			$(this).addClass('.load');
+    		$(this).append('<span class="loading"></span>');
+
 			//Trigger da function
 			apfaddpost();
 
@@ -45,21 +49,26 @@
 		//scrollto
 
 		$('a[href*="#"]:not([href="#"])').click(function() {
-	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-	      var target = $(this.hash);
-	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-	      if (target.length) {
-	        $('html, body').animate({
-	          scrollTop: target.offset().top
-	        }, 1000);
-	        return false;
-	      }
-	    }
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		  var target = $(this.hash);
+		  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		  if (target.length) {
+			$('html, body').animate({
+			  scrollTop: target.offset().top
+			}, 1000);
+			return false;
+		  }
+		}
 	  });
 
-		$('.navbar-toggle').click(function(event) {
-			$('.nav-collapse').slideToggle(500);
-		});
+	$('.navbar-toggle').click(function(event) {
+		$('.nav-collapse').slideToggle(500);
+	});
 		
+	//checked script
+	$('#terms').change(function(){
+	    var c = this.checked ? '#f00' : '#09f';
+			$('#send_data').show(400);
+	});
 
 })(jQuery);

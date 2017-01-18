@@ -159,6 +159,20 @@
 	}
 	//form
 	#suscription_form {
+		#messages{
+			width: 100%;
+			p{
+				display: block;
+				width: 100%;
+				padding: .5em;
+				background-color: #68b366;
+				text-align: center;
+				color: white;
+				margin: 1em auto;
+				font-family: $cavort;
+				border-radius: .5em;
+			}
+		}
 
 		fieldset{
 			display: none;
@@ -385,6 +399,28 @@
 					margin: .5em;
 					border-radius: 0;
 					padding: 0.5% 5%;
+					&#send_data{
+						position: relative;
+						display: none;
+						span.loading{
+							display: block;
+							position: absolute;
+							z-index: 1;
+							background-image: url('../img/loading.svg');
+							background-position: center center;
+							background-repeat: no-repeat;
+							background-color: transparent;
+							width: 100%;
+							height: 100%;
+							opacity: 1;
+							z-index: 4;
+							top: 0;
+							left: 0;
+						}
+						&.load{
+							opacity: .7;
+						}
+					}
 				}
 			}
 

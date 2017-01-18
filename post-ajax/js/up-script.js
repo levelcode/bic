@@ -2,6 +2,7 @@
 
 function apfaddpost() {
 
+
   var fd = new FormData(jQuery('#suscription_form')[0]);
 
       fd.append('action', 'apf_addpost');
@@ -12,6 +13,10 @@ function apfaddpost() {
         data: fd,
         contentType: false,
         processData: false,
+        beforeSend: function() {
+            jQuery('#send_data').addClass('.load');
+            jQuery('#send_data').append('<span class="loading"></span>');
+        },
         success: function(data, textStatus, XMLHttpRequest) {
             sucessvalues();
         },

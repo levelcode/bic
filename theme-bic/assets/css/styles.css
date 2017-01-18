@@ -371,6 +371,18 @@ html, body {
     color: #000000;
     font-size: 3em;
     padding-bottom: 1em; }
+  .form-suscription #suscription_form #messages {
+    width: 100%; }
+    .form-suscription #suscription_form #messages p {
+      display: block;
+      width: 100%;
+      padding: .5em;
+      background-color: #68b366;
+      text-align: center;
+      color: white;
+      margin: 1em auto;
+      font-family: "Cavorting";
+      border-radius: .5em; }
   .form-suscription #suscription_form fieldset {
     display: none; }
     .form-suscription #suscription_form fieldset.active {
@@ -530,6 +542,25 @@ html, body {
         margin: .5em;
         border-radius: 0;
         padding: 0.5% 5%; }
+        .form-suscription #suscription_form fieldset .asistant-frm .btn#send_data {
+          position: relative;
+          display: none; }
+          .form-suscription #suscription_form fieldset .asistant-frm .btn#send_data span.loading {
+            display: block;
+            position: absolute;
+            z-index: 1;
+            background-image: url("../img/loading.svg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            z-index: 4;
+            top: 0;
+            left: 0; }
+          .form-suscription #suscription_form fieldset .asistant-frm .btn#send_data.load {
+            opacity: .7; }
     .form-suscription #suscription_form fieldset.step-3 a {
       color: #ffffff;
       text-decoration: underline;
