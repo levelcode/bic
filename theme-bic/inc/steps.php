@@ -1,4 +1,4 @@
-<div class="how-works container">
+<div class="how-works container" id="mecanica">
 	<header>
 		<h2>¿Cómo funciona?</h2>
 	</header>

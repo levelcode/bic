@@ -16,6 +16,20 @@
 		?>
 
 			<article class="post-item col-md-3 col-sm-2">
+				<p class="counter">
+					<span class="votes-n">
+						<?php
+						if (function_exists('wp_ulike_get_post_likes')):
+						    if(wp_ulike_get_post_likes(get_the_ID())):
+						    	echo wp_ulike_get_post_likes(get_the_ID());
+						    else:
+						    	echo "0";
+						    endif;
+						endif;
+						?>
+					</span>
+					<span class="votes-txt">Votos</span>
+				</p>
 				<figure class="thumb">
 					<a href="<?php the_permalink();?>">go</a>
 					<span class="mask">

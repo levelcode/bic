@@ -99,6 +99,10 @@ html, body {
     @media (max-width: 768px) {
       #site-navigation .btn.btn-navbar {
         display: block; } }
+  #site-navigation .navbar-toggle {
+    background-color: #ffffff; }
+    #site-navigation .navbar-toggle .icon-bar {
+      background-color: #fd8e01; }
   #site-navigation .nav-collapse.collapse {
     display: inline-block;
     text-align: right;
@@ -181,6 +185,24 @@ html, body {
     right: -15px;
     text-indent: -99999px;
     z-index: 3; }
+  .category .content-loop .post-item .counter {
+    display: block;
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    z-index: 4; }
+    .category .content-loop .post-item .counter span {
+      display: block;
+      text-align: center;
+      color: #c64d9b;
+      font-family: "Cavorting"; }
+      .category .content-loop .post-item .counter span.votes-n {
+        font-size: 2em;
+        line-height: 1; }
   .category .content-loop .post-item:hover figure a {
     opacity: 1;
     transition: all ease-in .3s; }
@@ -216,9 +238,16 @@ html, body {
 
 .single .shares {
   text-align: center; }
+  .single .shares header {
+    margin-top: 1em; }
+    .single .shares header h2 {
+      text-align: center;
+      color: #ffffff;
+      font-size: 3em; }
   .single .shares > div {
     display: inline-block;
-    margin: 1em; }
+    margin: 1em;
+    vertical-align: middle; }
 
 .banner.container {
   background: #f9b600;

@@ -1,4 +1,4 @@
-<div class="votes">
+<div class="votes" id="votos">
 	<header>
 		<h2>Vota por tus favoritos</h2>
 	</header>

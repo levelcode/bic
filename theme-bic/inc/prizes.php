@@ -1,4 +1,4 @@
-<div class="prizes">
+<div class="prizes" id="premios">
 	<header>
 		<h2>Premios</h2>
 	</header>

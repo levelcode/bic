@@ -21,6 +21,14 @@
 		}
 	}
 
+	//button mobile
+	.navbar-toggle{
+		background-color: $white;
+		.icon-bar{
+			background-color: $yellow;
+		}
+	}
+
 	//menu
 	.nav-collapse{
 		&.collapse{

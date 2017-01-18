@@ -17,6 +17,12 @@
           <?php the_post_thumbnail('full'); ?>
         </figure>
         <div class="shares">
+            <header class="header-single">
+              <h2>Vota y Comparte</h2>
+            </header>
+            <div class="vote">
+              <?php echo do_shortcode('[wp_ulike]'); ?>
+            </div>
             <div class="fb-share-button" data-href="<?php the_permalink();?>" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>src=sdkpreparse">Compartir</a></div>
         </div>
       </div>

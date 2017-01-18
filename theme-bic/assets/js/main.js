@@ -37,14 +37,29 @@
 		$('#suscription_form #send_data').on('click',function(e) {
 
 			e.preventDefault();
-
-			var newArtistForm = jQuery('#suscription_form').serialize();
-
-			var fd = new FormData();
-
 			//Trigger da function
 			apfaddpost();
 
 		});
+
+		//scrollto
+
+		$('a[href*="#"]:not([href="#"])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html, body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+
+		$('.navbar-toggle').click(function(event) {
+			$('.nav-collapse').slideToggle(500);
+		});
+		
 
 })(jQuery);

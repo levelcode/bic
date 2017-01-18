@@ -1,4 +1,4 @@
-<div class="form-suscription">
+<div class="form-suscription" id="registro">
 	<div class="container">
 		<header>
 			<h2>Regístrate</h2>
