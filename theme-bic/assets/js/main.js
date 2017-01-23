@@ -10,16 +10,63 @@
 			event.preventDefault();
 		});
 
+		//Check file
+		$("input:file").change(function (){
+			var fileName = $(this).val();
+			$(this).siblings(".dummy-field").html('Archivo cargado');
+		});
+
 		//step 1
 		$('.step-1-next').click(function(event) {
-			$formCont.find('.step-1').removeClass('active');
-			$formCont.find('.step-2').addClass('active');
+
+			if($('input.file').val() === ""){
+
+				$('#messages').append('<p class="error">No has adjuntado los archivos</p>');
+			
+			} else if($('.name-post').val() === "" ) {
+				
+				$('#messages').append('<p class="error">Ingresa el nombre de la obra</p>');
+			
+			} else if($('.name-art').val() === "") {
+				
+				$('#messages').append('<p class="error">Ingresa el nombre de tu artista</p>');
+			
+			} else {
+				$('#messages').append('');
+				$formCont.find('.step-1').removeClass('active');
+				$formCont.find('.step-2').addClass('active');	
+			}
 		});
 
 		//step 2
 		$('.step-2-next').click(function(event) {
-			$formCont.find('.step-2').removeClass('active');
-			$formCont.find('.step-3').addClass('active');
+
+			if($('input.name-resp').val() === ""){
+
+				$('#messages').append('<p class="error">Ingresa el nombre del Responsable</p>');
+			
+			} else if($('input.id-card').val() === ""){
+
+				$('#messages').append('<p class="error">Ingresa la cédula del Resposable</p>');
+			
+			} else if($('input.id-kid').val() === ""){
+
+				$('#messages').append('<p class="error">Ingresa el documento del Niño</p>');
+			
+			} else if($('input.email').val() === ""){
+
+				$('#messages').append('<p class="error">Ingresa el Correo</p>');
+			
+			} else if($('input.tel').val() === ""){
+
+				$('#messages').append('<p class="error">Ingresa el Celular</p>');
+			
+			} else {
+				$('#messages').append('');
+				$formCont.find('.step-2').removeClass('active');
+				$formCont.find('.step-3').addClass('active');
+			}
+
 		});
 
 		$('.step-2-back').click(function(event) {
@@ -38,6 +85,8 @@
 
 			e.preventDefault();
 
+			$(this).parent('#suscription_form').validate();
+			
 			$(this).addClass('.load');
     		$(this).append('<span class="loading"></span>');
 

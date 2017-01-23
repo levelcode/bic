@@ -12,20 +12,20 @@
 			<fieldset class="step-1">
 				<div class="col-md-6 side-left">
 					<span class="input-holder file">
-						<input type="file" name="file-draw" placeholder="Adjuntar dibujo" class="file">
+						<input type="file" name="file-draw" placeholder="Adjuntar dibujo" class="file" required>
 						<div class="dummy-field">Adjuntar Obra</div>
 					</span>
 					<span class="input-holder file">
-						<input type="file" name="file-photo" placeholder="Adjuntar foto" class="file">
+						<input type="file" name="file-photo" placeholder="Adjuntar foto" class="file file2" required>
 						<div class="dummy-field">Adjuntar foto de colores bic</div>
 					</span>
 				</div>
 				<div class="col-md-6 side-right">
 					<span class="input-holder picture">
-						<input type="text" name="title" class="name-post" placeholder="nombre de la obra">
+						<input type="text" name="title" class="name-post" placeholder="nombre de la obra" required>
 					</span>
 					<span class="input-holder kid">
-						<input type="text" name="name-art" class="name-art"  placeholder="nombre de tu pequeño artista">
+						<input type="text" name="name-art" class="name-art"  placeholder="nombre de tu pequeño artista" required>
 					</span>
 				</div>
 				<div class="asistant-frm">
@@ -42,21 +42,21 @@
 							Solo podrán participar en la actividad las personas mayores de dieciocho (18) años que tengan la patria potestad de su hijo. De no cumplir con lo anterior, el Organizador descalificará a ese participante.
 						</span>
 						<span class="fk-input">?</span>
-						<input type="text" name="dad" class="name-resp"  placeholder="nombre del responsable">
+						<input type="text" name="dad" class="name-resp"  placeholder="nombre del responsable" required>
 					</span>
 					<span class="input-holder id-card">
-						<input type="text" name="id-card" class="id-card"  placeholder="Cédula del responsable">
+						<input type="text" name="id-card" class="id-card"  placeholder="Cédula del responsable" required>
 					</span>
 					<span class="input-holder id-card kid">
-						<input type="text" name="id-card-kid" class="id-card"  placeholder="nº. identidad del pequeño artista">
+						<input type="text" name="id-card-kid" class="id-card id-kid"  placeholder="nº. identidad del pequeño artista" required>
 					</span>
 				</div>
 				<div class="col-md-6 side-right">
 					<span class="input-holder email">
-						<input type="email" name="email" class="email" placeholder="Email">
+						<input type="email" name="email" class="email" placeholder="Email" required>
 					</span>
 					<span class="input-holder phone">
-						<input type="tel" name="tel" class="tel" placeholder="Celular">
+						<input type="tel" name="tel" class="tel" placeholder="Celular" required>
 					</span>
 				</div>
 				<div class="asistant-frm">

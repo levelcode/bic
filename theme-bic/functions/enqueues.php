@@ -26,6 +26,9 @@ function bst_enqueues() {
 	wp_register_script('html5-js', get_template_directory_uri() . '/assets/js/html5.js', false, null, true);
 	wp_enqueue_script('html5-js');
 
+	wp_register_script('validate-js', get_template_directory_uri() . '/assets/js/validate.js', false, null, true);
+	wp_enqueue_script('validate-js');
+
 	wp_register_script('bst-js', get_template_directory_uri() . '/assets/js/main.js', false, null, true);
 	wp_enqueue_script('bst-js');
 
