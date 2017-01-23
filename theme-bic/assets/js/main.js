@@ -110,6 +110,15 @@
 		}
 	  });
 
+	//modal close
+
+	$('.form-suscription #suscription_form .modal_form .close, .close-modal').click(function(event) {
+		
+		event.preventDefault();
+		$('.form-suscription #suscription_form .modal_form').fadeOut(500);
+	
+	});
+
 	$('.navbar-toggle').click(function(event) {
 		$('.nav-collapse').slideToggle(500);
 	});

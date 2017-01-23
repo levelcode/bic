@@ -93,6 +93,19 @@
 				</div>
 			</fieldset>
 
+			<div class="modal_form">
+				<div class="modal_frame">
+					<span class="close"><i class="fa fa-times" aria-hidden="true">x</i></span>
+					<header>
+						<h3>Tu foto se ha añadido</h3>
+					</header>
+					<p>
+						Tu obra ya esta publicada y puedes compartirla, pero recuerda que si no cumple con las condiciones del concurso será eliminada, en tal caso se te notificará vía correo electrónico.
+					</p>
+					<button class="close-modal">Cerrar</button>
+				</div>
+			</div>
+
 		</form>
 	</div>
 </div>
