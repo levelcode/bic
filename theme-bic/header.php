@@ -15,11 +15,6 @@
       <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
     <![endif]-->
     <?php wp_head(); ?>
-  
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="<?php wp_title( '|', true, 'right' ); ?>" />
-    <meta property="og:url" content="<?php echo esc_url( home_url( '/' ) ); ?>" />
-    <meta property="og:image" content="" />
 
     <!-- Fav and touch icons -->
     <link rel="icon" type="image/png" href="<?php bloginfo('template_url')?>/favicon.png" />
@@ -38,7 +33,7 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8&appId=1738448626406934";
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8&appId=1700971530193148";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 

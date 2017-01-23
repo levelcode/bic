@@ -173,19 +173,20 @@ add_filter('language_attributes', 'add_opengraph_doctype');
 
 function insert_fb_in_head() {
 	global $post;
-	if ( !is_singular()) //if it is not a post or a page
+	if (!is_singular()) //if it is not a post or a page
 		return;
-        echo '<meta property="fb:admins" content="YOUR USER ID"/>';
-        echo '<meta property="og:title" content="' . get_the_title() . '"/>';
+        echo '<meta property="fb:app_id" content="1700971530193148"/>';
+        echo '<meta property="og:title" content="¡Ayuda votando por la obra de este pequeño artista para que pueda ganar increíbles premios con BIC ! Ingresa ya a este link .."/>';
         echo '<meta property="og:type" content="article"/>';
         echo '<meta property="og:url" content="' . get_permalink() . '"/>';
-        echo '<meta property="og:site_name" content="Your Site NAME Goes HERE"/>';
-	if(!has_post_thumbnail( $post->ID )) { //the post does not have featured image, use a default image
+        echo '<meta property="og:description" content="Obra: '.get_the_title().' - Galería Pequeños Artistas Bic Evolution "/>';
+        echo '<meta property="og:site_name" content="Galería Bic"/>';
+	if(!has_post_thumbnail(get_the_ID())) { //the post does not have featured image, use a default image
 		$default_image="http://example.com/image.jpg"; //replace this with a default image on your server or an image in your media library
 		echo '<meta property="og:image" content="' . $default_image . '"/>';
 	}
 	else{
-		$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+		$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'medium' );
 		echo '<meta property="og:image" content="' . esc_attr( $thumbnail_src[0] ) . '"/>';
 	}
 	echo "
