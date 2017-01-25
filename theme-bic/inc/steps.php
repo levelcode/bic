@@ -8,7 +8,7 @@
 				<img src="<?php bloginfo('template_url')?>/assets/img/step1.png" alt="esferos bic"/>
 			</figure>
 			<p>
-				<a href="#register">Regístrate</a>,  junto con tu pequeño artista, sube la obra y una foto de él, con la caja de colores BIC que utilizó.   
+				<a href="#register">Regístrate</a>,  junto con tu pequeño artista, sube la obra tamaño 1/4 de pliego de cartulina y una foto de él, con la caja de colores BIC que utilizó.   
 				<span class="step">1</span>
 			</p>
 		</div>

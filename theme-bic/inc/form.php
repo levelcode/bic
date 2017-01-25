@@ -13,7 +13,7 @@
 				<div class="col-md-6 side-left">
 					<span class="input-holder file">
 						<input type="file" name="file-draw" placeholder="Adjuntar dibujo" class="file" required>
-						<div class="dummy-field">Adjuntar Obra</div>
+						<div class="dummy-field">Adjuntar Obra (1/4 de pliego)</div>
 					</span>
 					<span class="input-holder file">
 						<input type="file" name="file-photo" placeholder="Adjuntar foto" class="file file2" required>
