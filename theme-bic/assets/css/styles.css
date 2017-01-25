@@ -135,17 +135,20 @@ html, body {
   max-width: 90%; }
 
 .category .content-loop .post-item {
-  position: relative; }
+  position: relative;
+  min-height: 210px;
+  margin-bottom: 5em; }
   @media (max-width: 981px) {
     .category .content-loop .post-item {
-      margin-bottom: 2em; } }
+      margin-bottom: 5em; } }
   .category .content-loop .post-item figure {
     width: 100%;
     border-radius: 2em;
     overflow: hidden;
     box-shadow: 0 0 1em #ccc;
     position: relative;
-    z-index: 1; }
+    z-index: 1;
+    min-height: 320px; }
     .category .content-loop .post-item figure .mask {
       display: block;
       width: 100%;

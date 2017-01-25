@@ -15,8 +15,10 @@
 		//item
 		.post-item{
 			position: relative;
+			min-height: 210px;
+			margin-bottom: 5em;
 			@include sm-desktop{
-				margin-bottom: 2em;
+				margin-bottom: 5em;
 			}
 			figure{
 				width: 100%;
@@ -25,6 +27,7 @@
 				box-shadow: 0 0 1em #ccc;
 				position: relative;
 				z-index: 1;
+				min-height: 320px;
 				//mask of image
 				.mask{
 					display: block;
