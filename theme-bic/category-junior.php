@@ -10,6 +10,8 @@
 
 	<div class="content-loop container">
 		<?php
+			query_posts( 'posts_per_page=-1&category_name=junior' );
+
 			if(have_posts()):
 				while (have_posts()):the_post();
 					$name = get_post_meta($post->ID,'Nombre');

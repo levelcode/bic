@@ -27,7 +27,8 @@
 				box-shadow: 0 0 1em #ccc;
 				position: relative;
 				z-index: 1;
-				min-height: 320px;
+				min-height: 350px;
+				background-color: $white;
 				//mask of image
 				.mask{
 					display: block;

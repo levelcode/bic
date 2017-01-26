@@ -9,6 +9,21 @@ function bst_setup() {
 }
 add_action('init', 'bst_setup');
 
+
+function wpse_modify_category_posts_per_page( $query ) {
+
+    // Check we're on the frontend and modifying the main query.
+    if (!is_admin() && $query->is_main_query()) {
+
+        // Change to 8 posts per page when viewing a category.
+        if ($query->is_category()) {
+            $query->set( 'posts_page_page', '-1');
+        } 
+
+    } 
+}
+add_action( 'pre_get_posts', 'wpse_modify_category_posts_per_page' );
+
 if (! isset($content_width))
 	$content_width = 600;
 

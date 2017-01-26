@@ -136,14 +136,8 @@ html, body {
 
 .category .content-loop .post-item {
   position: relative;
-<<<<<<< Updated upstream
   min-height: 210px;
   margin-bottom: 5em; }
-=======
-  margin-bottom: 60px;
-  min-height: 200px;
-  }
->>>>>>> Stashed changes
   @media (max-width: 981px) {
     .category .content-loop .post-item {
       margin-bottom: 5em; } }
@@ -154,13 +148,8 @@ html, body {
     box-shadow: 0 0 1em #ccc;
     position: relative;
     z-index: 1;
-<<<<<<< Updated upstream
-    min-height: 320px; }
-=======
-    min-height: 360px;
-    background-color: white;
-    }
->>>>>>> Stashed changes
+    min-height: 350px;
+    background-color: #ffffff; }
     .category .content-loop .post-item figure .mask {
       display: block;
       width: 100%;
@@ -168,25 +157,18 @@ html, body {
       overflow: hidden; }
       .category .content-loop .post-item figure .mask img {
         display: block;
-        min-height: 100%;
-        min-width: 100%;
-        }
+        width: 100%;
+        height: auto; }
     .category .content-loop .post-item figure .caption {
       background-color: #ffffff;
       padding: 5%; }
       .category .content-loop .post-item figure .caption h3 {
         font-family: "Cavorting";
         color: #5b5b5f;
-        margin-top: 0;
-        text-transform: capitalize;
-        }
+        margin-top: 0; }
       .category .content-loop .post-item figure .caption h4 {
         font-family: "Arial Rounded MT";
-        color: #aeadb3;
-        max-height: 60px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        }
+        color: #aeadb3; }
     .category .content-loop .post-item figure a {
       display: block;
       width: 100%;

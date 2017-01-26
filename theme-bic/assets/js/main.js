@@ -134,4 +134,15 @@
 		$(this).siblings('.prompt-text').fadeToggle(400);
 	});
 
+	//Voto realizado
+	var voteSel = $('.wpulike .counter a');
+
+	voteSel.click(function(event) {
+		/* Act on the event */
+		if(voteSel.attr('data-ulike-status') === 2){
+			$(this).append('Gracias por tu voto!');
+		}
+
+	});
+	
 })(jQuery);
