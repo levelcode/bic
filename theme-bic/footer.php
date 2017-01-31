@@ -15,6 +15,10 @@
   ga('send', 'pageview');
 
 </script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58B6Q97"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
   <?php wp_footer(); ?>
 
