@@ -102,6 +102,8 @@
 					<p>
 						Tu obra ya esta publicada y puedes compartirla, pero recuerda que si no cumple con las condiciones del concurso será eliminada, en tal caso se te notificará vía correo electrónico.
 					</p>
+					<iframe id="frame" src="" width="10" height="10">
+     				</iframe>
 					<button class="close-modal">Cerrar</button>
 				</div>
 			</div>

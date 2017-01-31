@@ -30,6 +30,7 @@ function sucessvalues() {
     //append body for new window
     jQuery('#messages').append('<p>Tu Foto se ha añadido correctamente</p>');
     jQuery('#send_data').remove();
+    jQuery("#frame").attr("src", "http://www.galeriabic.com/pixel-fb.html");
 
     $('.form-suscription #suscription_form .modal_form').fadeIn(400);
 }
